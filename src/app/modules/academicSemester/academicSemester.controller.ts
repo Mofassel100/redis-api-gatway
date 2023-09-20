@@ -15,6 +15,58 @@ const insertIntoDB = async (req: Request, res: Response, next: NextFunction) => 
     next(err);
   }
 };
+const getAllFromDB = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const result = await AcademicSemesterService.getAllFromDB(req);
+    sendResponse(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+const getSingleDataFromDB = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const result = await AcademicSemesterService.getSingleDataFromDB(req);
+    sendResponse(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+const UpdateIntoDB = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const result = await AcademicSemesterService.UpdateIntoDB(req);
+    sendResponse(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+const DeletedFromDb = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const result = await AcademicSemesterService.DeleteFromDB(req);
+    sendResponse(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
 export const AcademicSemesterController = {
-  insertIntoDB
+  insertIntoDB,
+  getAllFromDB,
+  getSingleDataFromDB,
+  UpdateIntoDB,
+  DeletedFromDb
 };
