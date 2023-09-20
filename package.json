@@ -1,8 +1,7 @@
 {
   "name": "university-management-api-gateway",
   "version": "1.0.0",
-  "repository": "https://github.com/Programming-Hero-Next-Level-Development/university-management-api-gateway.git",
-  "author": "Programming Hero",
+  "author": "Mofassel Hosain",
   "license": "MIT",
   "scripts": {
     "dev": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' -T ./src/server.ts",
