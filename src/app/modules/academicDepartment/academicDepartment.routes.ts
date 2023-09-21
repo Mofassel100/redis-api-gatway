@@ -15,7 +15,7 @@ router.delete('/:id', AcademicDepartmentController.DeletedFromDb);
 router.get('/', AcademicDepartmentController.getAllFromDB);
 
 router.post(
-  '/',
+  '/create',
   // validateRequest(academicSemesterValidation.createAcademicSemesterZodSchema),
   auth(ENUM_USER_ROLE.ADMIN, ENUM_USER_ROLE.SUPER_ADMIN),
   AcademicDepartmentController.insertIntoDB
