@@ -4,9 +4,9 @@
   "author": "Mofassel Hosain",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' -T ./src/server.ts",
+    "dev": "nodemon 'ts-node'  ./src/server.ts",
     "build": "tsc",
-    "start": "nodemon ts-node ./src/server.ts"
+    "start": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' 'ts-node' -T ./src/server.ts"
   },
   "dependencies": {
     "axios": "^1.4.0",
