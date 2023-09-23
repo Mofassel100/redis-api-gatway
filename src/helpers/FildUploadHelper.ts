@@ -23,6 +23,7 @@ const UploadCloudinary = async (file: IUploadFile): Promise<ICloudinaryResponse>
     cloudinary.uploader.upload(file.path, (error: Error, result: ICloudinaryResponse) => {
       fs.unlinkSync(file.path);
       if (error) {
+        console.log(error);
         reject(error);
       } else {
         resolve(result);
