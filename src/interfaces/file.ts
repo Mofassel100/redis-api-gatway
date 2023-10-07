@@ -27,7 +27,8 @@ export type ICloudinaryResponse = {
   url: string;
   secure_url: string;
   folder: string;
-  overwritten: boolean;
-  original_filename: string;
-  api_key: string;
+  original_filename: string,
+ original_extension: string,
+  api_key: string,
+  UploadApiResponse: string | undefined
 };
